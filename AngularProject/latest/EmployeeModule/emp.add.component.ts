@@ -1,5 +1,5 @@
-import { Employee } from './../Models/employee';
 import {Component,Output,EventEmitter} from "@angular/core"
+import {Employee} from "../Models/employee"
 import {EmployeeService} from "../Logics/EmployeeService"
 @Component({
     selector:'employee-add',
@@ -8,11 +8,9 @@ import {EmployeeService} from "../Logics/EmployeeService"
 export class EmployeeAddComponent{
     @Output() OnSave:EventEmitter<void>=new EventEmitter<void>();
     @Output() OnCancel:EventEmitter<void>=new EventEmitter<void>();
-    n:string 
-    s:number
-    emp:Employee = new Employee("",0)
     constructor(private eLogic:EmployeeService){
     }
+   emp:Employee=new Employee("",0);
     SaveEmployee():void{
         this.eLogic.SaveEmployee
         (this.emp);

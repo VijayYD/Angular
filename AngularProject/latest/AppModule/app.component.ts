@@ -24,13 +24,3 @@ export class CustomerComponent{
 export class ProductComponent{
     
 }
-
-@Component({
-    selector: 'app-root',
-    template: '<app-observable></app-observable><app-promise></app-promise>'
-                 
-              
- })
- export class ServiceComponent { 
- 
- }

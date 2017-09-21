@@ -9,8 +9,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var employee_1 = require("./../Models/employee");
 var core_1 = require("@angular/core");
+var employee_1 = require("../Models/employee");
 var EmployeeService_1 = require("../Logics/EmployeeService");
 var EmployeeAddComponent = /** @class */ (function () {
     function EmployeeAddComponent(eLogic) {

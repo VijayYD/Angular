@@ -1,7 +1,28 @@
 
-<div >
-    EmpName: <input type="text"><br> Salary: <input type="text"><br>
+<!-- <div >
+    EmpName: <input type="text" #name (input)="n=name.value"><br> 
+    Salary: <input type="text"#sal (input)="s=sal.value"><br>
     <input type="button" value="Save" (click)="SaveEmployee()">
     <input type="button" value="Cancel" (click)="HideAddNew()">
     
-</div>
+</div> -->
+
+
+<div >
+        EmpName: <input type="text" [value]="emp.EmpName" (input)="emp.EmpName=$event.target.value"><br> 
+        Salary: <input type="text" [value]="emp.Salary" (input)="emp.Salary=$event.target.value"><br>
+        <input type="button" value="Save" (click)="SaveEmployee()">
+        <input type="button" value="Cancel" (click)="HideAddNew()">
+        
+    </div>
+
+    
+<!-- <div >
+        EmpName: 
+        <input type="text" [(ngModel)]="emp.EmpName"><br>
+         Salary:
+        <input type="text"  [(ngModel)]="emp.Salary"><br>
+        <input type="button" value="Save" (click)="SaveEmployee()">
+        <input type="button" value="Cancel" (click)="HideAddNew()">
+        
+    </div> -->

@@ -43,16 +43,4 @@ var ProductComponent = /** @class */ (function () {
     return ProductComponent;
 }());
 exports.ProductComponent = ProductComponent;
-var ServiceComponent = /** @class */ (function () {
-    function ServiceComponent() {
-    }
-    ServiceComponent = __decorate([
-        core_1.Component({
-            selector: 'app-root',
-            template: '<app-observable></app-observable><app-promise></app-promise>'
-        })
-    ], ServiceComponent);
-    return ServiceComponent;
-}());
-exports.ServiceComponent = ServiceComponent;
 //# sourceMappingURL=app.component.js.map
