@@ -16,14 +16,21 @@ var EmployeeListComponent = /** @class */ (function () {
         this.eLogic = eLogic;
         this.OnAddNew = new core_1.EventEmitter();
         this.c = 0;
+        this.myColor = "green";
         this.Employees = eLogic.GetEmployees();
     }
+    EmployeeListComponent.prototype.SetOrange = function () {
+        this.myColor = "orange";
+    };
+    EmployeeListComponent.prototype.SetGreen = function () {
+        this.myColor = "green";
+    };
     EmployeeListComponent.prototype.ShowAddNew = function () {
         this.c++;
-        //if (this.c == 2) {
-        this.OnAddNew.emit();
-        this.c = 0;
-        // }
+        if (this.c == 2) {
+            this.OnAddNew.emit();
+            this.c = 0;
+        }
     };
     __decorate([
         core_1.Output(),
