@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div [hidden]="isAddNewStudent">
+        <h1>Student Info</h1>
+        <!-- (click) - output proprty of angular input component -->
+        <input type="button" (click)="ShowStudentView()" value="Add Student">
+        <table align="center">
+            <tr>
+                <th>Student Name</th>
+                <th>Roll No</th>
+                <th>Marks Obtained</th>
+            </tr>
+            <tr *ngFor="let x of student">
+                <!-- {{value}} is called interpolation -->
+                <td align="center">{{x.studentName}}</td>
+                <td align="center">{{x.rollNo}}</td>
+                <td align="center">{{x.marks}}</td>
+            </tr>
+        </table>
+    </div>
+    <!-- [hidden] is proprty binding -->
+    <div [hidden]="!isAddNewStudent">
+        <h1>Add Student</h1>
+        Student Name <input type="text"><br><br> RollNo <input type="text"><br><br> Marks <input type="text"><br><br>
+        <input type="button" (click)="SaveStudent()" value="Save">
+        <input type="button" (click)="HideStudentView()" value="Cancel">
+    </div>
+</body>
+
+</html>
